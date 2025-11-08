@@ -1,0 +1,17 @@
+{
+  "name": "desafio-cypress-qa",
+  "version": "1.0.0",
+  "description": "Desafio técnico QA Sênior - Automação Web e API",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "npx cypress run --spec 'cypress/e2e/ui/**'",
+    "test:api": "npx cypress run --spec 'cypress/e2e/api/**'",
+    "test:open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.6.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "valido": {
+    "email": "",
+    "senha": ""
+  },
+  "invalido": {
+    "email": "",
+    "senha": ""
+  }
+}
