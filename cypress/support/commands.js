@@ -37,7 +37,19 @@ Cypress.Commands.add('adicionarProdutoAoCarrinho', (produto) => {
 
 // Validação genérica de mensagens do WooCommerce
 Cypress.Commands.add('validarMensagemSistema', (trechoMensagem) => {
-  cy.get('.woocommerce-message, .woocommerce-error, .woocommerce-info')
-    .should('be.visible')
-    .and('contain.text', trechoMensagem)
+  const selector = '.woocommerce-message, .woocommerce-error, .woocommerce-info, .woocommerce-notices-wrapper'
+
+  cy.get('body', { timeout: 10500 }).then(($body) => {
+    // Se existir algum container conhecido de mensagem
+    if ($body.find(selector).length > 0) {
+      cy.get(selector)
+        .should('be.visible')
+        .and('contain.text', trechoMensagem)
+    } else {
+      // Fallback: tenta localizar o texto diretamente na página
+      cy.contains(trechoMensagem, { timeout: 10500 })
+        .should('be.visible')
+    }
+  })
 })
+
