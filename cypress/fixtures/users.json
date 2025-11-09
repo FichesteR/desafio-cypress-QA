@@ -1,10 +1,14 @@
 {
   "valido": {
-    "email": "",
-    "senha": ""
+    "email": "teste_indt@teste.com",
+    "senha": "teste@123"
   },
   "invalido": {
-    "email": "",
-    "senha": ""
+    "email": "aluno_ebac@teste.com",
+    "senha": "senha_incorreta"
+  },
+  "naoCadastrado": {
+    "email": "usuario.naocadastrado@teste.com",
+    "senha": "Teste@123"
   }
 }

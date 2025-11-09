@@ -3,7 +3,7 @@ Cypress.Commands.add('login', (email, senha) => {
   cy.visit('/minha-conta')
   cy.get('#username').clear().type(email)
   cy.get('#password').clear().type(senha, { log: false })
-  cy.get('button[name="login"]').click()
+  cy.get('input[type="submit"][value="Login"]').click()
 })
 
 // Cadastro de novo usuário
