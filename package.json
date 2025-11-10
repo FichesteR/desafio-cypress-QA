@@ -4,9 +4,10 @@
   "description": "Desafio técnico QA Sênior - Automação Web e API",
   "main": "index.js",
   "scripts": {
-    "test:ui": "npx cypress run --spec 'cypress/e2e/ui/**'",
-    "test:api": "npx cypress run --spec 'cypress/e2e/api/**'",
-    "test:open": "npx cypress open"
+    "test": "cypress run",
+    "test:ui": "cypress run --spec 'cypress/e2e/ui/**/*.cy.js'",
+    "test:api": "cypress run --spec 'cypress/e2e/api/**/*.cy.js'",
+    "test:open": "cypress open"
   },
   "keywords": [],
   "author": "",
