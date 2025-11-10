@@ -11,7 +11,7 @@ Cypress.Commands.add('cadastrarUsuario', (email, senha) => {
   cy.visit('/minha-conta')
   cy.get('#reg_email').clear().type(email)
   cy.get('#reg_password').clear().type(senha, { log: false })
-  cy.get('button[name="register"]').click()
+  cy.get('input[type="submit"][value="Register"]').click()
 })
 
 // Adicionar produto ao carrinho

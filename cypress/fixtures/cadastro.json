@@ -1,10 +1,10 @@
 {
-  "valido": {
-    "emailValido": "teste_indt@teste.com",
+  "existente": {
+    "emailExistente": "teste_indt@teste.com",
     "senhaValida": "teste@123"
   },
-  "existente": {
-    "emailExistente": "aluno_ebac@teste.com",
-    "senha": "teste@123"
+  "invalido": {
+    "emailIncorreto": "teste_test@teste",
+    "senhaCorreta": "teste@123"
   }
 }
