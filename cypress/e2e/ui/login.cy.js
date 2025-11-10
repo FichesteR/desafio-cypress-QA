@@ -6,6 +6,9 @@ describe('Login - Loja EBAC', () => {
 
     cy.url().should('include', '/minha-conta')
     cy.contains('Olá').should('exist')
+    cy.url().should('include', '/minha-conta')
+    cy.get('.woocommerce-MyAccount-navigation').should('exist')
+
   })
 
   it('Não deve autenticar com senha inválida', () => {
